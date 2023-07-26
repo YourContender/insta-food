@@ -1,9 +1,21 @@
-import logo from '../../img/header/logo.png';
 import { faMagnifyingGlass, faUser} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logo from '../../img/header/logo.png';
 import './Header.scss';
+import { useState } from 'react';
 
 const Header = () => {
+    const [current, setCurrent] = useState(0);
+    const [index, setIndex] = useState(0);
+
+    const tickNumber = () => {
+
+    }
+
+    setInterval(() => {
+        // setCurrent(current + 1)
+    }, 1500);
+
     return (
         <div className='header'>
             <div className='header_logo'>
@@ -33,10 +45,12 @@ const Header = () => {
                         <div>
                             <span>+38</span>
                         </div>
-                        <div className='header_text-down-tel-num'>
-                            <span>(068)</span>
-                            <p>Kyivstar</p>
+                       
+                        <div className='header_text-down-tel-red'>
+                            <span>(099)</span> 
+                            <p>Vodafone</p>
                         </div>
+
                         <div>
                             <span>9450166</span>
                         </div>

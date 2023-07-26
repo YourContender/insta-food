@@ -2,14 +2,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { 
     Navigation, Pagination, Mousewheel, Keyboard, Autoplay 
 } from 'swiper/modules';
+import slide1 from '../../img/slider/slide1.jpg';
+import slide2 from '../../img/slider/slide2.jpg';
+import slide3 from '../../img/slider/slide3.jpg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './slider.scss'
-
-import slide1 from '../../img/slider/slide1.jpg';
-import slide2 from '../../img/slider/slide2.jpg';
-import slide3 from '../../img/slider/slide3.jpg';
 
 const Slider= () => {
     return (
@@ -21,7 +20,7 @@ const Slider= () => {
             mousewheel={true}
             keyboard={true}
             autoplay={{
-                delay: 2500,
+                delay: 3500,
                 disableOnInteraction: false,
             }}
             modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}

@@ -1,13 +1,9 @@
 .mySwiper {
     margin: 0 auto;
     width: 100%;
-    position: absolute;
-    z-index: -1;
+    // position: absolute;
+    z-index: 1;
     top: 0;
-    img {
-        // width: 800px;
-        // height: 600px;
-    }
 }
 
 .swiper-slide {
