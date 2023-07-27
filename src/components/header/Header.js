@@ -1,20 +1,10 @@
-import { faMagnifyingGlass, faUser} from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faUser, faSquarePhoneFlip} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../../img/header/logo.png';
 import './Header.scss';
 import { useState } from 'react';
 
 const Header = () => {
-    const [current, setCurrent] = useState(0);
-    const [index, setIndex] = useState(0);
-
-    const tickNumber = () => {
-
-    }
-
-    setInterval(() => {
-        // setCurrent(current + 1)
-    }, 1500);
 
     return (
         <div className='header'>
@@ -62,6 +52,18 @@ const Header = () => {
                         <FontAwesomeIcon icon={faUser}/>
                     </span>
                 </div>
+            </div>
+
+            <div className="header_mobile">
+                <div className="header_mobile-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span className='header_mobile-phone'>
+                    <FontAwesomeIcon icon={faSquarePhoneFlip} />
+                </span>
             </div>
         </div>
     

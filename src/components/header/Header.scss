@@ -7,7 +7,9 @@
     align-items: flex-start;
     width: 100%;
     // box-shadow: 0 0.75em 8em 8em rgba(0, 164, 148, .45);
-
+    &_mobile {
+        display: none;
+    }
     &_logo {
         display: flex;
         margin-right: 20px;
@@ -78,8 +80,10 @@
                 width: 180px;
                 height: 45px;
                 color: #cdcdcd;
+                border: 2px solid #cdcdcd7a;
                 font-size: 18px;
                 margin-right: 35px;
+                outline: none;
             }
             span {
                 font-family: Roboto, sans-serif;
@@ -169,8 +173,34 @@
     }
 }
 
-.test_img {
-    width: 60px;
-    height: 60px;
-    // color: red;
+
+@media (max-width: 1050px) {
+    .header {
+        justify-content: space-around;
+        align-items: center;
+        &_text {
+            display: none;
+        }
+        &_mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-burger {
+                margin-right: 60px;
+                span {
+                    display: block;
+                    width: 50px;
+                    height: 4px;
+                    margin: 8px 0;
+                    background-color: #db1aec;
+                }
+            }
+            &-phone {
+                font-size: 60px;
+                color: #db1aec;
+                margin-top: 4px;
+                margin-left: 60px;
+            }
+        }
+    }
 }

@@ -18,3 +18,21 @@
     height: 570px;
     object-fit: cover;
 }
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        width: 100%;
+        height: 570px;
+        object-fit: cover;
+        
+    }
+}
