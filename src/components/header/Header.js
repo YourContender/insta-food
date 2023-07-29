@@ -5,7 +5,6 @@ import './Header.scss';
 import { useState } from 'react';
 
 const Header = () => {
-
     return (
         <div className='header'>
             <div className='header_logo'>

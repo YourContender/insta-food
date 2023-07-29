@@ -204,3 +204,24 @@
         }
     }
 }
+
+@media (max-width: 650px) {
+    .header {
+        &_title {
+            h4 {
+                font-size: 24px;
+            }
+            span {
+                font-size: 16px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &_mobile {
+            &-phone {
+                font-size: 44px;
+            }
+        }
+    }
+}
