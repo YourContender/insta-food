@@ -4,13 +4,33 @@ import menu from '../../data';
 
 const Nav = () => {
     const [menuSection, setMenuSection] = useState([]);
+    const [showAllListSection, setShowAllListSection] = useState(false);
 
     useEffect(() => {
         setMenuSection([...menu]);
     }, []);
 
+    useEffect(() => {
+
+    })
+
+    const showListSection = () => {
+        setShowAllListSection(!showAllListSection);
+
+        if (!showAllListSection) {
+            [...menuSection].map(item => {
+                return item.styles = 'nav_content-item';
+            });
+        } else {
+            [...menuSection].map((item, index) => {
+                return index >= 4 ? item.styles = 'nav_content-item hide' : null;
+            })
+        }
+
+    }
+
     return (
-        <div className="nav">
+        <div className="nav" style={showAllListSection ? {height: '490px'}: {height: '210px'}}>
             <div className="nav_content">
                 {
                     menuSection.map(item => {
@@ -25,7 +45,11 @@ const Nav = () => {
                
             </div>   
             <div className="nav_content_list">
-                <button>See</button>
+                <button
+                    onClick={showListSection}
+                >
+                    See
+                </button>
             </div>
         </div>
     )
