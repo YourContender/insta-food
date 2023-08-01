@@ -225,3 +225,20 @@
         }
     }
 }
+
+@media (max-width: 540px) {
+    .header {
+        &_title {
+            display: none;
+        }
+        &_mobile {
+            &-phone {
+                display: none;
+            }
+            &-burger {
+                margin-right: 0;
+                margin-top: 25px;
+            }
+        }
+    }
+}

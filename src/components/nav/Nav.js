@@ -10,10 +10,6 @@ const Nav = () => {
         setMenuSection([...menu]);
     }, []);
 
-    useEffect(() => {
-
-    })
-
     const showListSection = () => {
         setShowAllListSection(!showAllListSection);
 
@@ -26,11 +22,10 @@ const Nav = () => {
                 return index >= 4 ? item.styles = 'nav_content-item hide' : null;
             })
         }
-
     }
 
     return (
-        <div className="nav" style={showAllListSection ? {height: '490px'}: {height: '210px'}}>
+        <div className="nav" style={showAllListSection ? {height: '490px'}: {height: 'auto'}}>
             <div className="nav_content">
                 {
                     menuSection.map(item => {

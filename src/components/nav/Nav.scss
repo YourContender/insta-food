@@ -1,6 +1,6 @@
 .nav {
     position: absolute;
-    height: 210px;
+    height: auto;
     width: 100%;
     background-color: rgba(1, 65, 58, 0.37);
     z-index: 1;
@@ -89,7 +89,7 @@
                 }
             }
             &-item {
-                padding: 20px 30px;
+                padding: 20px 22px;
                 &.hide {
                     display: none;
                 }
