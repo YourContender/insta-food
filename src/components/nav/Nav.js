@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
-import './Nav.scss';
 import menu from '../../data';
+import Section from './nav-section/Section';
+import { faAnglesDown, faAnglesUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './Nav.scss';
 
 const Nav = () => {
     const [menuSection, setMenuSection] = useState([]);
@@ -29,12 +32,7 @@ const Nav = () => {
             <div className="nav_content">
                 {
                     menuSection.map(item => {
-                        return (
-                            <div className={item.styles} key={item.name}>
-                                <img src={item.src} alt={item.src} />
-                                <span>{item.name}</span>
-                            </div>
-                        )
+                        return <Section {...item} key={item.title}/>
                     })
                 }
                
@@ -43,7 +41,8 @@ const Nav = () => {
                 <button
                     onClick={showListSection}
                 >
-                    See
+
+                {showAllListSection ?  <FontAwesomeIcon icon={faAnglesUp} /> : <FontAwesomeIcon icon={faAnglesDown} /> }
                 </button>
             </div>
         </div>

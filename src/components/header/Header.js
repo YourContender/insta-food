@@ -41,7 +41,7 @@ const Header = () => {
                             <div className='header_text-down'>
                                 <input placeholder='Шукати за назвою'/>
                                 <div className="header_text-down-tel">
-                                    <div>
+                                    <div>   
                                         <span>+38</span>
                                     </div>
                                 

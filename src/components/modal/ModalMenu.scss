@@ -1,8 +1,112 @@
 .modal {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background-color: aquamarine;
+    background: linear-gradient(to bottom, #031625, #060a0b);
     position: absolute;
     top: 0;
-    z-index: 9999;
+    z-index: 10;
+    transition: left .3s ease-out;
+    &_input {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+        input {
+            width: 80%;
+            height: 60px;
+            border-radius: 35px;
+            background: linear-gradient(to right, #052137, #060a0b);
+            border: 1px solid #696969;
+            outline: none;
+            padding-left: 20px;
+            &::placeholder, &:focus, &:active {
+                font-size: 24px;
+                letter-spacing: 1px;
+                color: #696969;
+            }   
+        }
+    }
+    &_road {
+        margin: 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+        span {
+            display: block;
+            width: auto;
+            font-size: 20px;
+            margin: 5px 8px;
+            padding: 5px 10px;
+            border: 1px solid #04A89A;
+            color: #fff;
+            border-radius: 30px;
+        }
+    }
+    &_section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 40px;
+        img {
+            width: 60px;
+            height: 50px;
+        }
+        &-btn {
+            display: flex;
+            justify-content: center;
+            button {
+                font-size: 24px;
+                color: #04A89A;
+                background: none;
+                border: none;
+            }
+        }
+    }
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &-user {
+            color: #db1aec;
+            font-size: 32px;
+            margin-top: 20px;
+        }
+        &-close {
+            color: #db1aec;
+            border: none;
+            background: transparent;
+            font-size: 42px;
+            margin-top: 20px;
+            padding: 0;
+        }
+    }
+    &_telephone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        letter-spacing: 1px;
+        span {
+            font-size: 28px;
+            margin: 0;
+        }
+        &-num {
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+                color: rgb(245, 60, 60);
+                font-size: 24px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 700;
+                color: rgb(245, 60, 60);
+                margin: 0;
+            }
+        }
+    }
 }

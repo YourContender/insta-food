@@ -12,52 +12,52 @@ import sauce from './img/nav/gravy.png';
 const menu = [
     {
         styles: 'nav_content-item',
-        name: 'Шаурма',
+        title: 'Шаурма',
         src: shawarma
     },
     {
         styles: 'nav_content-item',
-        name: 'Бургери',
+        title: 'Бургери',
         src: burgers
     },
     {
         styles: 'nav_content-item',
-        name: 'Піца',
+        title: 'Піца',
         src: pizza
     },
     {
         styles: 'nav_content-item',
-        name: 'Салати',
+        title: 'Салати',
         src: salad
     },
     {
         styles: 'nav_content-item hide',
-        name: 'Суші',
+        title: 'Суші',
         src: sushi
     },
     {
         styles: 'nav_content-item hide',
-        name: 'Роли',
+        title: 'Роли',
         src: roll
     },
     {
         styles: 'nav_content-item hide',
-        name: 'Фаст-фуд',
+        title: 'Фаст-фуд',
         src: potato
     },
     {
         styles: 'nav_content-item hide',
-        name: 'Десерти',
+        title: 'Десерти',
         src: dessert
     },
     {
         styles: 'nav_content-item hide',
-        name: 'Напої',
+        title: 'Напої',
         src: drink
     },
     {
         styles: 'nav_content-item hide',
-        name: 'Соуси',
+        title: 'Соуси',
         src: sauce
     },
 ];

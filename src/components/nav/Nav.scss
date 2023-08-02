@@ -12,11 +12,16 @@
         &_list {
             button {
                 display: none;
+                font-size: 24px;
+                color: #04A89A;
+                background: none;
+                border: none;
             }
         }
         &-item {
             display: flex;
             flex-direction: column;
+            align-items: center;
             padding: 20px 17px;
             margin: 0 5px;
             img {
@@ -92,6 +97,37 @@
                 padding: 20px 22px;
                 &.hide {
                     display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .nav {
+        &_content {
+            &-item {
+                padding: 20px 15px;
+                img {
+                    width: 65px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .nav {
+        &_content {
+            &-item {
+                padding: 20px 15px;
+                img {
+                    width: 50px;
+                    height: 45px;
+                }
+                span {
+                    font-size: 14px;
                 }
             }
         }
