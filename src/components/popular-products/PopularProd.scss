@@ -1,0 +1,85 @@
+.popular {
+    width: 1200px;
+    color: #fff;
+    margin: 180px auto;
+    &_title {
+        font-weight: 900;
+        font-size: 52px;
+        font-family: Roboto, sans-serif;
+    }
+    &_item {
+        border: 1px solid rgba(255, 255, 255, .1);
+        width: 260px;
+        padding: 20px;
+        &-sales {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 5px;
+            span {
+                display: block;
+                font-size: 20px;
+                padding: 0 10px;
+                border-radius: 30px;
+                text-transform: uppercase;
+            }
+            &-percent {
+                border: 1px solid rgba(221, 90, 50, 0.781);
+                color: rgba(221, 90, 50, 0.781);
+            }
+            &-new {
+                border: 1px solid #04A89A;
+                color: #04A89A;
+            }
+        }
+        &-title {
+            font-family: Roboto, sans-serif;
+            font-weight: 500;
+            color: #fff;
+            font-size: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        &-descr {
+            font-family: Roboto, sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: #04A89A;
+            height: 120px;
+            text-align: center;
+        }
+        &-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &-weight {
+                font-family: Roboto, sans-serif;
+                font-weight: 300;
+                color: rgba(255, 255, 255, .5);
+                font-size: 18px;
+                line-height: 1em;
+                padding: 10px 15px;
+                border-right: 1px solid #04A89A;
+            }
+            &-price {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                :first-child {
+                    color: #fff;
+                    font-family: Roboto, sans-serif;
+                    font-weight: 900;
+                    font-size: 32px;
+                }
+                span {
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    color: rgba(255, 255, 255, .5);
+                    text-transform: uppercase;
+                }
+            }
+            &-basket {
+                cursor: pointer;
+            }
+        }
+    }
+}
