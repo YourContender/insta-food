@@ -2,6 +2,11 @@
     width: 1200px;
     color: #fff;
     margin: 180px auto;
+    &_container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-left: none;
+    }
     &_title {
         font-weight: 900;
         font-size: 52px;
@@ -11,6 +16,10 @@
         border: 1px solid rgba(255, 255, 255, .1);
         width: 260px;
         padding: 20px;
+        transition: .4s ease-in;
+        &:hover {
+            background-color: #1b1a1a;
+        }
         &-sales {
             display: flex;
             justify-content: space-around;
@@ -30,6 +39,14 @@
                 border: 1px solid #04A89A;
                 color: #04A89A;
             }
+            &-hit {
+                border: 1px solid #dbac11;
+                color: #dbac11;
+            }
+            &-sale {
+                border: 1px solid #660361;
+                color: #660361;
+            }
         }
         &-title {
             font-family: Roboto, sans-serif;
@@ -38,13 +55,14 @@
             font-size: 20px;
             padding-bottom: 10px;
             text-align: center;
+            height: 55px;
         }
         &-descr {
             font-family: Roboto, sans-serif;
             font-weight: 500;
             font-size: 14px;
             color: #04A89A;
-            height: 120px;
+            height: 80px;
             text-align: center;
         }
         &-info {
@@ -79,6 +97,10 @@
             }
             &-basket {
                 cursor: pointer;
+                opacity: .7;
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }
