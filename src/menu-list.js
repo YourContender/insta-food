@@ -1,7 +1,7 @@
-import img1 from './img/menu-items/pizza1.png';
-import img2 from './img/menu-items/2.png';
-import img3 from './img/menu-items/3.png';
-import img4 from './img/menu-items/4.png';
+import img1 from './img/menu-items/pop1.png';
+import img2 from './img/menu-items/pop2.png';
+import img3 from './img/menu-items/pop3.png';
+import img4 from './img/menu-items/pop4.png';
 
 export const list = [
     {

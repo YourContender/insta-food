@@ -5,29 +5,13 @@ import { list } from '../../menu-list';
 import { onValue, ref, remove, set, update } from "firebase/database";
 import { db } from "../../firebase";
 
-// export const getFullListTasksFromDatabase = () => {
-//     return async dispatch => {
-//         onValue(ref(db), item => {
-//             const data = item.val(); 
-
-//             if (data !== null) {
-//                 dispatch({
-//                     type: 'GET_TASKS_LIST',
-//                     payload: data
-//                 })
-//             }
-//         })
-//     }
-// }
-
 function PopularProd() {
 
-    const getFullListTasksFromDatabase = () => {
+    const getFullListMenuFromDatabase = () => {
         onValue(ref(db), item => {
             const data = item.val(); 
 
             if (data !== null) {
-                // console.log(data);
                 data.menu.map(item => {
                     return console.log(item.category);
                 })
@@ -35,9 +19,9 @@ function PopularProd() {
         })
     }
 
-    getFullListTasksFromDatabase()
+    getFullListMenuFromDatabase()
 
-    return (
+    return (    
         <div className="popular">
             <h1 className="popular_title">Популярні товари:</h1>
 
