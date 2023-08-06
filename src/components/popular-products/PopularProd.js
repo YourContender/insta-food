@@ -1,25 +1,23 @@
+import { onValue, ref } from "firebase/database";
+import { db } from "../../firebase";
+import { useState } from 'react';
+import { useEffect } from 'react';
 import basket from '../../img/basket.png';
 import './PopularProd.scss';
-import { list } from '../../menu-list';
-
-import { onValue, ref, remove, set, update } from "firebase/database";
-import { db } from "../../firebase";
 
 function PopularProd() {
+    const [listMenu, setListMenu] = useState([]);
 
-    const getFullListMenuFromDatabase = () => {
+    useEffect(() => {
         onValue(ref(db), item => {
             const data = item.val(); 
+            console.log(data.menu);
 
             if (data !== null) {
-                data.menu.map(item => {
-                    return console.log(item.category);
-                })
+                return setListMenu(data.menu);
             }
         })
-    }
-
-    getFullListMenuFromDatabase()
+    }, [])
 
     return (    
         <div className="popular">
@@ -27,7 +25,7 @@ function PopularProd() {
 
         <div className="popular_container">
             {
-                list.map(item => {
+                listMenu.map(item => {
                     return (
                         <div className="popular_item" key={item.id}>
                             <div className="popular_item-sales">
