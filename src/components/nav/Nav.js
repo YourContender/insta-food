@@ -29,7 +29,7 @@ const Nav = () => {
 
     return (
         <div className="nav" style={showAllListSection ? {height: '490px'}: {height: 'auto'}}>
-            <div className="nav_content">
+            <div className="nav_content" style={showAllListSection ? {height: '100%'}: {height: 'auto'}}>
                 {
                     menuSection.map(item => {
                         return <Section {...item} key={item.title}/>
