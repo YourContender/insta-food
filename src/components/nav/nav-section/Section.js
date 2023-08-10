@@ -1,9 +1,13 @@
-const Section = ({ styles, src, title }) => {
+import { Link } from 'react-router-dom';
+
+const Section = ({ styles, src, title, link }) => {
     return (
-        <div className={styles}>
-            <img src={src} alt={src} />
-            <span>{title}</span>
-        </div>
+        <Link to={link}>
+            <div className={styles}>
+                <img src={src} alt={src} />
+                <span>{title}</span>
+            </div>
+        </Link>
     )
 }
 

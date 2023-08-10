@@ -13,52 +13,62 @@ const menu = [
     {
         styles: 'nav_content-item',
         title: 'Шаурма',
-        src: shawarma
+        src: shawarma,
+        link: '/shawarma'
     },
     {
         styles: 'nav_content-item',
         title: 'Бургери',
-        src: burgers
+        src: burgers,
+        link: '/burgers'
     },
     {
         styles: 'nav_content-item',
         title: 'Піца',
-        src: pizza
+        src: pizza,
+        link: '/pizza'
     },
     {
         styles: 'nav_content-item',
         title: 'Салати',
-        src: salad
+        src: salad,
+        link: '/salad'
     },
     {
         styles: 'nav_content-item hide',
         title: 'Суші',
-        src: sushi
+        src: sushi,
+        link: '/sushi'
     },
     {
         styles: 'nav_content-item hide',
         title: 'Роли',
-        src: roll
+        src: roll,
+        link: '/rolls'
     },
     {
         styles: 'nav_content-item hide',
         title: 'Фаст-фуд',
-        src: potato
+        src: potato,
+        link: '/fast-food'
     },
     {
         styles: 'nav_content-item hide',
         title: 'Десерти',
-        src: dessert
+        src: dessert,
+        link: '/dessert'
     },
     {
         styles: 'nav_content-item hide',
         title: 'Напої',
-        src: drink
+        src: drink,
+        link: '/drink'
     },
     {
         styles: 'nav_content-item hide',
         title: 'Соуси',
-        src: sauce
+        src: sauce,
+        link: '/sauce'
     },
 ];
 

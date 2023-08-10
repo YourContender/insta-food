@@ -1,11 +1,12 @@
-import { faMagnifyingGlass, faUser, faSquarePhoneFlip} from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { faMagnifyingGlass, faUser, faSquarePhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
+import ModalMenu from '../modal/ModalMenu';
 import logo from '../../img/header/logo.png';
 import './Header.scss';
-import { useState } from 'react';
-import ModalMenu from '../modal/ModalMenu';
 
-const Header = () => {
+const Header = ({ display }) => {
     const [modalMenu, setModalMenu] = useState(false);
 
     return (
@@ -16,16 +17,18 @@ const Header = () => {
                         setModalMenu={setModalMenu}
                     /> : 
                     
-                    <div className='header'>
-                        <div className='header_logo'>
-                            <img src={logo} alt='logo'/>
+                    <div className='header' style={{position: display}}>
+                        <Link to='/'>
+                            <div className='header_logo'>
+                                <img src={logo} alt='logo'/>
 
-                            <div className='header_title'>
-                                <h4>InstaFood</h4>
-                                <span>м.Київ</span>
-                                <p>З 10:00 до 21:00</p>
+                                <div className='header_title'>
+                                    <h4>InstaFood</h4>
+                                    <span>м.Київ</span>
+                                    <p>З 10:00 до 21:00</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
 
                         <div className='header_text'>
                             <div className='header_text-top'>

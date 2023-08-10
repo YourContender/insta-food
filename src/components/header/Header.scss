@@ -6,6 +6,9 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+    a {
+        text-decoration: none;
+    }
     // box-shadow: 0 0.75em 8em 8em rgba(0, 164, 148, .45);
     &_mobile {
         display: none;
