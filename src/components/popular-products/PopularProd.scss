@@ -19,6 +19,12 @@
         width: 260px;
         padding: 15px;
         transition: .4s ease-in;
+        &-img {
+            img {
+                width: 260px;
+                height: 260px;
+            }
+        }
         &:hover {
             background-color: #1b1a1a;
         }

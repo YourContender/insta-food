@@ -10,8 +10,8 @@ const HomePage = () => {
             <Slider/>
             <Header display='absolute'/>
             <Nav/>
-            <PopularProd />
-            {/* <MenuItems category='menu'/> */}
+            {/* <PopularProd /> */}
+            <MenuItems category='menu'/>
         </>
     )
 }

@@ -11,10 +11,10 @@ function PopularProd() {
     useEffect(() => {
         onValue(ref(db), item => {
             const data = item.val(); 
-            console.log(data.menu);
+            console.log(data.burgers);
 
             if (data !== null) {
-                return setListMenu(data.menu);
+                return setListMenu(data.burgers);
             }
         })
     }, [])
@@ -29,8 +29,8 @@ function PopularProd() {
                         return (
                             <div className="popular_item" key={item.id}>
                                 <div className="popular_item-sales">
-                                    <span className={item.tag.first[1]}>{item.tag.first[0]}</span>
-                                    <span className={item.tag.second[1]}>{item.tag.second[0]}</span>
+                                    <span className={item.tag[0][1]}>{item.tag[0][0]}</span>
+                                    <span className={item.tag[1][1]}>{item.tag[1][0]}</span>
                                 </div>
 
                                 <div className="popular_item-img">

@@ -28,8 +28,8 @@ function MenuItems({ category }) {
                         return (
                             <div className="popular_item" key={item.id}>
                                 <div className="popular_item-sales">
-                                    <span className={item.tag.first[1]}>{item.tag.first[0]}</span>
-                                    <span className={item.tag.second[1]}>{item.tag.second[0]}</span>
+                                    <span className={item.tag[0][1]}>{item.tag[0][0]}</span>
+                                    <span className={item.tag[1][1]}>{item.tag[1][0]}</span>
                                 </div>
 
                                 <div className="popular_item-img">
