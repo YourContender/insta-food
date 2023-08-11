@@ -255,115 +255,115 @@
 // ]
 
 
-let b = [
-    {
-        "id": 1,
-        "title": "Піца Чотири сиру Блек Едішн",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Мед, Соус томатний, Сир дорблю, Сир мармуровий, Сир Чорний лимон, Сир моцарела, Тісто дріжджове",
-        "weight": "480",
-        "price": ["308", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 2,
-        "title": "Запечений рол з тунцем",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Тунець обсмажений, Авокадо, Ікра масаго, Крем-сир, Лист салату, Соус спайсі, Сирна шапочка, Норі, Рис заправлений",
-        "weight": "350",
-        "price": ["246", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 3,
-        "title": "Тальятелле з морепродуктами",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Тальятелле, Кальмар, Креветка тигрова, мідії, Петрушка, Соус томатний, стружка тунця, Сир пармезан",
-        "weight": "290",
-        "price": ["212", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 4,
-        "title": "Кесаділля з куркою",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Куряче стегно, Піко де гайо, Кетчуп, Пшенична тортилья, Сир моцарела",
-        "weight": "280",
-        "price": ["138", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 5,
-        "title": "Аджарський хачапурі",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Бринза, Сир Сулугунi, Вершкове масло, Куряче яйце, Тісто дріжджове",
-        "weight": "320",
-        "price": ["143", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 6,
-        "title": "Суші-торт Philadelphia",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Гаваї рол, Каліфорнія рол, Кароліна рол, Філадельфія 2шт, Філадельфія Грін 3шт",
-        "weight": "1930",
-        "price": ["1268", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 7,
-        "title": "Дабл Чізбургер",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Котлета з яловичини, Гірчиця американська, Кетчуп, Цибуля маринована, Огірок солоний, Пшенична булочка, Салат айсберг, Сир чеддер",
-        "weight": "280",
-        "price": ["176", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 8,
-        "title": "Фреш-рол з куркою-панко",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Куряче філе, Лист салату, Огірок, Помідор, Пшенична тортилья, Салат айсберг, Салат Радичі, Соус цезар",
-        "weight": "280",
-        "price": ["137", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 9,
-        "title": "Бургер Джек Дениелс",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Бекон, Котлета з яловичини, Цибуля карамелізована, Цибуля маринована, Помідор, Пшенична булочка, Салат айсберг, Соус Джек Деніелс, Сир чеддер",
-        "weight": "350",
-        "price": ["212", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 10,
-        "title": "Піца Віденська з бортиком",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Салямі, Сосиски віденські, Телятина, Цибуля карамелізована, Петрушка, Соус томатний, Сир моцарела, Тісто дріжджове",
-        "weight": "820",
-        "price": ["287", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    },
-    {
-        "id": 11,
-        "title": "Шаурма з куркою та картоплею",
-        "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/burgers/1.png",
-        "descr": "Куряче стегно, Східні спеції, Капуста, Картопля-фрi, Цибуля маринована, Огірок, Петрушка, Помідор, Пшенична тортилья, Соус вершковий",
-        "weight": "350",
-        "price": ["287", "грн"],
-        "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
-        "category": "popular"
-    }
-]
+// let b = [
+//     {
+//         "id": 1,
+//         "title": "Піца Чотири сиру Блек Едішн",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/1.png",
+//         "descr": "Мед, Соус томатний, Сир дорблю, Сир мармуровий, Сир Чорний лимон, Сир моцарела, Тісто дріжджове",
+//         "weight": "480",
+//         "price": ["308", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 2,
+//         "title": "Запечений рол з тунцем",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/2.png",
+//         "descr": "Тунець обсмажений, Авокадо, Ікра масаго, Крем-сир, Лист салату, Соус спайсі, Сирна шапочка, Норі, Рис заправлений",
+//         "weight": "350",
+//         "price": ["246", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 3,
+//         "title": "Тальятелле з морепродуктами",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/3.png",
+//         "descr": "Тальятелле, Кальмар, Креветка тигрова, мідії, Петрушка, Соус томатний, стружка тунця, Сир пармезан",
+//         "weight": "290",
+//         "price": ["212", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 4,
+//         "title": "Кесаділля з куркою",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/4.png",
+//         "descr": "Куряче стегно, Піко де гайо, Кетчуп, Пшенична тортилья, Сир моцарела",
+//         "weight": "280",
+//         "price": ["138", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 5,
+//         "title": "Аджарський хачапурі",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/5.png",
+//         "descr": "Бринза, Сир Сулугунi, Вершкове масло, Куряче яйце, Тісто дріжджове",
+//         "weight": "320",
+//         "price": ["143", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 6,
+//         "title": "Суші-торт Philadelphia",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/6.png",
+//         "descr": "Гаваї рол, Каліфорнія рол, Кароліна рол, Філадельфія 2шт, Філадельфія Грін 3шт",
+//         "weight": "1930",
+//         "price": ["1268", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 7,
+//         "title": "Дабл Чізбургер",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/7.png",
+//         "descr": "Котлета з яловичини, Гірчиця американська, Кетчуп, Цибуля маринована, Огірок солоний, Пшенична булочка, Салат айсберг, Сир чеддер",
+//         "weight": "280",
+//         "price": ["176", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 8,
+//         "title": "Фреш-рол з куркою-панко",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/8.png",
+//         "descr": "Куряче філе, Лист салату, Огірок, Помідор, Пшенична тортилья, Салат айсберг, Салат Радичі, Соус цезар",
+//         "weight": "280",
+//         "price": ["137", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 9,
+//         "title": "Бургер Джек Дениелс",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/9.png",
+//         "descr": "Бекон, Котлета з яловичини, Цибуля карамелізована, Цибуля маринована, Помідор, Пшенична булочка, Салат айсберг, Соус Джек Деніелс, Сир чеддер",
+//         "weight": "350",
+//         "price": ["212", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 10,
+//         "title": "Піца Віденська з бортиком",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/10.png",
+//         "descr": "Салямі, Сосиски віденські, Телятина, Цибуля карамелізована, Петрушка, Соус томатний, Сир моцарела, Тісто дріжджове",
+//         "weight": "820",
+//         "price": ["287", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     },
+//     {
+//         "id": 11,
+//         "title": "Шаурма з куркою та картоплею",
+//         "img": "https://raw.githubusercontent.com/YourContender/insta-food/main/src/img/popular/11.png",
+//         "descr": "Куряче стегно, Східні спеції, Капуста, Картопля-фрi, Цибуля маринована, Огірок, Петрушка, Помідор, Пшенична тортилья, Соус вершковий",
+//         "weight": "350",
+//         "price": ["137", "грн"],
+//         "tag":[["new", "popular_item-sales-new"], ["hit", "popular_item-sales-hit"]],
+//         "category": "popular"
+//     }
+// ]

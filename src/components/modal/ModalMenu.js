@@ -11,8 +11,14 @@ const ModalMenu = ({ setModalMenu }) => {
     const [showAllListSection, setShowAllListSection] = useState(false);
     
     useEffect(() => {
+        document.body.classList.add("no-scroll");
         setMenuSection([...menu]);
     }, []);
+
+    const closeModalMenu = () => {
+        document.body.classList.remove("no-scroll");
+        setModalMenu(false);
+    }
 
     const showListSection = () => {
         setShowAllListSection(!showAllListSection);
@@ -39,7 +45,7 @@ const ModalMenu = ({ setModalMenu }) => {
 
                 <button 
                     className='modal_header-close'
-                    onClick={() => setModalMenu(false)}
+                    onClick={closeModalMenu}
                 >
                     <FontAwesomeIcon icon={faXmark} />
                 </button>
