@@ -4,19 +4,19 @@
 // import img4 from './img/menu-items/4.png';
 
 // export const list = [
-//     {
-//         id: '1',
-//         title: 'Кіш з куркою та овочами',
-//         tag: {
-//             first: ['new', 'popular_item-sales-new'],
-//             second: ['no %', 'popular_item-sales-percent'],
-//         },
-//         img: img1,
-//         descr: 'Куряче філе, Брокколі, Цибуля біла, Перець солодкий',
-//         weight: '150',
-//         price: ['90', 'грн'],
-//         category: 'pizza'
-//     },
+    // {
+    //     id: '1',
+    //     title: 'Кіш з куркою та овочами',
+    //     tag: {
+    //         first: ['new', 'popular_item-sales-new'],
+    //         second: ['no %', 'popular_item-sales-percent'],
+    //     },
+    //     img: img1,
+    //     descr: 'Куряче філе, Брокколі, Цибуля біла, Перець солодкий',
+    //     weight: '150',
+    //     price: ['90', 'грн'],
+    //     category: 'pizza'
+    // }
 //     {
 //         id: '2',
 //         title: 'Піца Чотири сиру Блек Едішн 30 см',
@@ -111,22 +111,18 @@
 // ]
 
 
-// let a = [{
-//     "id": 8,
-//     "title": "Тальятелле з морепродуктами",
-//     "img": "img4",
-//     "descr": "Тальятелле, Кальмар, Креветка тигрова, мідії, Петрушка",
-//     "weight": "90",
-//     "price": ["212", "грн"],
-//     "category": "aaa"
-// },
-// {
-//     "id": 7,
-//     "title": "Test",
-//     "img": "img4",
-//     "descr": "Test description",
-//     "weight": "90",
-//     "price": ["100", "грн"],
-//     "category": "bbb"
-// }
-// ]
+let a = [{
+    "id": 1,
+    "title": "Тальятелле з морепродуктами",
+    "img": "img4",
+    "descr": "Тальятелле, Кальмар, Креветка тигрова, мідії, Петрушка",
+    "weight": "90",
+    "price": ["212", "грн"],
+    "tag": {
+        "first": ['new', 'popular_item-sales-new'],
+        "second": ['no %', 'popular_item-sales-percent'],
+    },
+    "category": "aaa"
+},
+
+]
