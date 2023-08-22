@@ -4,8 +4,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    a {
+        text-decoration: none;
+    }
+    &_modal {
+        position: absolute;
+        width: 100%;
+        height: 100vh;  
+        background-color: #fff;
+        z-index: 10000;
+    }
     &_container {
-        display: grid;
+        display: grid;  
         grid-template-columns: repeat(4, 1fr);
         border-left: none;
     }
@@ -19,6 +29,7 @@
         width: 260px;
         padding: 15px;
         transition: .4s ease-in;
+        text-decoration: none;
         &-sales {
             display: flex;
             justify-content: space-around;
@@ -29,6 +40,7 @@
                 padding: 0 10px;
                 border-radius: 30px;
                 text-transform: uppercase;
+                text-decoration: none;
             }
         }
         &-img {
@@ -86,6 +98,7 @@
                     letter-spacing: 1px;
                     color: rgba(255, 255, 255, .5);
                     text-transform: uppercase;
+                    text-decoration: none;
                 }
             }
             &-basket {

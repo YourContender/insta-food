@@ -1,0 +1,163 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 70px;
+    &_photo {
+        img {
+            width: 550px;
+            height: 550px;
+        }
+    }
+    &_content {
+        width: 560px;
+        &-name {
+            span {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 900;
+                font-size: 52px;
+                color: #fff;
+                text-transform: none;
+            }
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                color: #00a798;
+                line-height: 22px;
+                padding: 0 0 20px;
+            }
+        }
+        &-likes, &-comment {
+            font-size: 36px;
+            color: #69696998;
+            
+        }
+        &-comment {
+            margin-left: 20px;
+            
+        }
+
+        &-data {
+            margin-top: 35px;
+            display: flex;
+            
+            &-order {
+                display: flex;
+                flex-direction: column;
+                margin-left: 75px;
+                .icon {
+                    width: 40px;
+                    height: 40px;
+                }
+                button {
+                    width: 186px;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 46px;
+                    border: 1px dashed #00a79971;
+                    background: none;
+                    color: #696969dc;
+                    margin-bottom: 10px;
+                    border-radius: 10px;
+                    p {
+                        font-size: 16px;
+                        text-align: left;
+                        padding-left: 20px;
+                        
+                    }
+                    &:hover {
+                        transition: .5s ease-in;
+                        border: 1px dashed #00a799;
+                        color: #fff;
+                    }
+                }
+                a {
+                    width: 186px;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    background-color: #00a79971;
+                    text-transform: lowercase;
+                    letter-spacing: 2px;
+                    font-weight: 700;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgb(0 167 153);
+                        transition: .4s all ease-in;
+                        color: #070707
+                    }
+                }
+            }
+
+            &-calc {
+                p {
+                    color: rgba(255, 255, 255, .5);
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    font-size: 22px;
+                }
+            }
+            &-quantity {
+                border-bottom: 1px solid #00a79950;
+                span {
+                    color: rgba(255, 255, 255, .5);
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    font-size: 22px;
+                }
+            }
+            &-price {
+                display: flex;
+                align-items: center;
+                &-calc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; 
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 5px;
+                        border: 1px solid #00a798;
+                        border-radius: 15px;
+                        width: 33px;
+                        height: 26px;
+                        
+                    }   
+                }
+                span, p {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 100;
+                    font-size: 38px;
+                    color: rgba(255, 255, 255, .5);
+                    line-height: 1.125em;
+                    margin-right: 10px;
+                    text-decoration: line-through;
+                }
+                h4 {
+                    display: inline-block;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 900;
+                    font-size: 3.75em;
+                    color: #fff;
+                    line-height: 1em;
+                    margin: 0;
+                }
+                p {
+                    display: inline-block;
+                    font-size: 32px;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

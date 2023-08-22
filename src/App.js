@@ -10,6 +10,7 @@ import RollsPage from './pages/RollsPage';
 import SaladPage from './pages/SaladPage';
 import SushiPage from './pages/SushiPage';
 import SaucePage from './pages/SaucePage';
+import CardProductPage from './pages/CardProductPage';
 import './index.scss';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/salad" element={<SaladPage />}/>
                 <Route path="/sushi" element={<SushiPage />}/>
                 <Route path="/sauce" element={<SaucePage />}/>
+                <Route path="/card" element={<CardProductPage />}/>
             </Routes>
         </div>
     )
