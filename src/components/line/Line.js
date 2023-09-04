@@ -17,7 +17,11 @@ const Line = ({category}) => {
             <div className="line_container">
                 <Link to='/'>Головна</Link>
                 {
-                    secondLink ? <Link to={'/' + category}>{secondLink}</Link> : null
+                    secondLink ? <Link 
+                        to={'/' + category}
+                    >
+                        {secondLink}
+                    </Link> : null
                 }
             </div>
         </div>

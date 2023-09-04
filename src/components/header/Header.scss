@@ -1,3 +1,5 @@
+@import "../../scss/mixins.scss";
+
 .header {
     position: absolute;
     top: 0;
@@ -27,6 +29,7 @@
             font-weight: 700;
             letter-spacing: 1px;
             margin-top: 55px;
+            // @include my-mixin(red, 16px);
             text-shadow: 
                 0 0 0px #db1aec, 
                 0 0 0px #db1aec, 
@@ -177,36 +180,38 @@
 }
 
 
-@media (max-width: 1050px) {
-    .header {
-        justify-content: space-around;
-        align-items: center;
-        &_text {
-            display: none;
-        }
-        &_mobile {
-            display: flex;
-            justify-content: space-between;
+// @media (max-width: 1050px) {
+    @include test {
+        .header {
+            justify-content: space-around;
             align-items: center;
-            &-burger {
-                margin-right: 60px;
-                span {
-                    display: block;
-                    width: 50px;
-                    height: 4px;
-                    margin: 8px 0;
-                    background-color: #db1aec;
-                }
+            &_text {
+                display: none;
             }
-            &-phone {
-                font-size: 60px;
-                color: #db1aec;
-                margin-top: 4px;
-                margin-left: 60px;
+            &_mobile {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &-burger {
+                    margin-right: 60px;
+                    span {
+                        display: block;
+                        width: 50px;
+                        height: 4px;
+                        margin: 8px 0;
+                        background-color: #db1aec;
+                    }
+                }
+                &-phone {
+                    font-size: 60px;
+                    color: #db1aec;
+                    margin-top: 4px;
+                    margin-left: 60px;
+                }
             }
         }
     }
-}
+// }
 
 @media (max-width: 650px) {
     .header {

@@ -12,6 +12,7 @@
     }
     &_content {
         width: 560px;
+        margin-left: 20px;
         &-name {
             span {
                 font-family: 'Roboto', sans-serif;
@@ -32,7 +33,10 @@
         &-likes, &-comment {
             font-size: 36px;
             color: #69696998;
-            
+            transition: .4s ease-in;
+            &:hover {
+                color: #fff;
+            }
         }
         &-comment {
             margin-left: 20px;
@@ -130,7 +134,7 @@
                         border-radius: 15px;
                         width: 33px;
                         height: 26px;
-                        
+                        cursor: pointer;
                     }   
                 }
                 span, p {
@@ -156,6 +160,225 @@
                     font-size: 32px;
                     color: #fff;
                     text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        &_photo {
+            img {
+                width: 515px;
+                height: 520px;
+            }
+        }
+        &_content {
+            &-name {
+                width: 500px;
+            }
+            &-data {
+                &-order {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .card {
+        &_photo {
+            img {
+                width: 420px;
+                height: 410px;
+            }
+        }
+        &_content {
+            &-name {
+                width: 470px;
+                span {
+                    font-size: 40px;
+                }
+            }
+            &-data {
+                &-order {
+                    margin-left: 40px;
+                }
+                &-price {
+                    h4 {
+                        font-size: 2.75rem;
+                    }
+                    span {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .card {
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        &_photo {
+            img {
+                width: 520px;
+                height: 510px;
+            }
+        }
+        &_content {
+            margin-left: 0;
+            &-name {
+                width: 600px;
+                text-align: center;
+                span {
+                    font-size: 52px;
+                }
+            }
+            &-data {
+                &-order {
+                    margin-left: 120px;
+                }
+                &-price {
+                    h4 {
+                        font-size: 3.75rem;
+                    }
+                    span {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .card {
+        &_photo {
+            img {
+                width: 450px;
+                height: 460px;
+            }
+        }
+        &_content {
+            &-svg {
+                display: flex;
+                justify-content: center;
+            }
+            &-name {
+                width: auto;
+                text-align: center;
+                span {
+                    font-size: 48px;
+                }
+            }
+            &-data {
+                justify-content: center;
+                &-order {
+                    margin-left: 100px;
+                }
+                &-price {
+                    h4 {
+                        font-size: 2.75rem;
+                    }
+                    span {
+                        font-size: 25px
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .card {
+        &_photo {
+            img {
+                width: 450px;
+                height: 460px;
+            }
+        }
+        &_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            &-svg {
+                display: flex;
+                justify-content: center;
+            }
+            &-name {
+                width: 400px;
+                text-align: center;
+                span {
+                    font-size: 48px;
+                }
+            }
+            &-data {
+                // flex-direction: column;
+                align-items: center;
+                &-quantity {
+                    width: 90%;
+                }
+                &-order {
+                    margin-left: 20px;
+                }
+                &-price {
+                    h4 {
+                        font-size: 2.75rem;
+                    }
+                    span {
+                        font-size: 25px
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 474px) {
+    .card {
+        &_photo {
+            img {
+                width: 310px;
+                height: 320px;
+            }
+        }
+        &_content {
+            &-name {
+                width: 310px;
+                text-align: center;
+                span {
+                    font-size: 32px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+            &-data {
+                flex-direction: column;
+                align-items: center;
+                &-quantity {
+                    width: 90%;
+                }
+                &-order {
+                    margin-left: 0px;
+                    margin-top: 20px;
+                    button, a {
+                        width: 228px;
+                    }
+                }
+                &-price {
+                    h4 {
+                        font-size: 3.75rem;
+                    }
+                    span {
+                        font-size: 25px
+                    }
                 }
             }
         }
