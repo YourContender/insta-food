@@ -8,16 +8,14 @@ import { useState } from "react";
 
 const CardProduct = () => {
 	const currentProd = useSelector((elem) => elem.menu.current);
-	const { title, descr, category, img, currency, weight, price, tag } =
+	const { title, descr, category, img, currency, weight, price } =
 		currentProd[0];
 
 	const [amountProds, setAmountProds] = useState(1);
 	const [correctPrice, setCorrectPrice] = useState(price);
 
 	const checkForPositiveNumber = (num) => {
-		if (num <= 0) {
-			return 1;
-		} else if (num >= 10) {
+		if (num <= 0 || num >= 10) {
 			return 1;
 		} else {
 			return num;
