@@ -1,17 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ModalMenu from "../modal/ModalMenu";
+import logo from "../../img/header/logo.png";
 import {
 	faMagnifyingGlass,
 	faUser,
 	faSquarePhoneFlip,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
-import ModalMenu from "../modal/ModalMenu";
-import logo from "../../img/header/logo.png";
 import "./Header.scss";
 
 const Header = ({ display }) => {
 	const [modalMenu, setModalMenu] = useState(false);
+	const phoneNumbers = ["097", "099", "095"];
+	const phoneOperators = ["Kyivstar", "Vodafone", "Lifecell"];
+	const phoneColors = ["blue", "red", "yellow"];
+	const [currentPhoneNumberIndex, setCurrentPhoneNumberIndex] = useState(0);
+	const [currentPhoneNumber, setCurrentPhoneNumber] = useState(phoneNumbers[0]);
+	const [currentOperator, setCurrentOperator] = useState(phoneOperators[0]);
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setCurrentPhoneNumberIndex((prevIndex) => {
+				return (prevIndex + 1) % phoneNumbers.length;
+			});
+		}, 3000);
+
+		return () => clearInterval(timer);
+	}, []);
+
+	useEffect(() => {
+		setCurrentPhoneNumber(phoneNumbers[currentPhoneNumberIndex]);
+		setCurrentOperator(phoneOperators[currentPhoneNumberIndex]);
+	}, [currentPhoneNumberIndex]);
 
 	return (
 		<>
@@ -49,9 +70,11 @@ const Header = ({ display }) => {
 									<span>+38</span>
 								</div>
 
-								<div className="header_text-down-tel-red">
-									<span>(099)</span>
-									<p>Vodafone</p>
+								<div
+									className={`header_text-down-tel-${phoneColors[currentPhoneNumberIndex]}`}
+								>
+									<span>{currentPhoneNumber}</span>
+									<p>{currentOperator}</p>
 								</div>
 
 								<div>

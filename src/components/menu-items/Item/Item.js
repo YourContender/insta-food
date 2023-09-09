@@ -1,7 +1,7 @@
+import { useDispatch, useSelector } from "react-redux";
+import { getCurrentProduct } from "../../../store/menuSlice";
 import { Link } from "react-router-dom";
 import basket from "../../../img/basket.png";
-import { useDispatch, useSelector } from "react-redux";
-import { getCurrentProduct } from "../menuSlice";
 
 const Item = ({ tag, img, title, descr, weight, price, currency, id }) => {
 	const dispatch = useDispatch();
