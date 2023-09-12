@@ -33,6 +33,10 @@ const CardProduct = () => {
 		}
 	};
 
+	const addProductToBasket = () => {
+		console.log("work");
+	};
+
 	return (
 		<>
 			<Line category={category} />
@@ -87,7 +91,12 @@ const CardProduct = () => {
 								<p>Замовити в один клік</p>
 							</button>
 
-							<a className="card_content-data-order-click">Замовити</a>
+							<a
+								className="card_content-data-order-click"
+								onClick={addProductToBasket}
+							>
+								Замовити
+							</a>
 						</div>
 					</div>
 				</div>

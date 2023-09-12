@@ -1,3 +1,5 @@
+@import "../../scss/mixins";
+
 .menu {
     color: #fff;
     margin: 40px auto;
@@ -114,22 +116,17 @@
 
 .popular_item {
     &-sales {
-        
         &-percent {
-            border: 1px solid rgba(221, 90, 50, 0.781);
-            color: rgba(221, 90, 50, 0.781);
+            @include percent-tag;
         }
         &-new {
-            border: 1px solid #04A89A;
-            color: #04A89A;
+            @include new-tag;
         }
         &-hit {
-            border: 1px solid #dbac11;
-            color: #dbac11;
+            @include hit-tag;
         }
         &-sale {
-            border: 1px solid #660361;
-            color: #660361;
+            @include sale-tag;
         }
     }
 }

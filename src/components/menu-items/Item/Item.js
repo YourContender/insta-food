@@ -8,7 +8,7 @@ const Item = ({ tag, img, title, descr, weight, price, currency, id }) => {
 	const menu = useSelector((elem) => elem.menu.menu);
 
 	const changeProductFromList = (id) => {
-		console.log(menu.filter((item) => item.id === id));
+		// console.log(menu.filter((item) => item.id === id));
 		return dispatch(getCurrentProduct(menu.filter((item) => item.id === id)));
 	};
 

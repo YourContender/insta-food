@@ -87,6 +87,8 @@ const Header = ({ display }) => {
 							<span className="header_text-down-user">
 								<FontAwesomeIcon icon={faUser} />
 							</span>
+
+							<Link to={"/basket"}>button add</Link>
 						</div>
 					</div>
 

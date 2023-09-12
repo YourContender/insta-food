@@ -1,4 +1,4 @@
-@import "../../scss/mixins.scss";
+@import "../../scss/variables";
 
 .header {
     position: absolute;
@@ -11,7 +11,6 @@
     a {
         text-decoration: none;
     }
-    // box-shadow: 0 0.75em 8em 8em rgba(0, 164, 148, .45);
     &_mobile {
         display: none;
     }
@@ -25,26 +24,25 @@
             margin: 0;
             padding: 0;
             font-size: 28px;
-            color: #db1aec;
+            color: $pink_color;
             font-weight: 700;
             letter-spacing: 1px;
             margin-top: 55px;
-            // @include my-mixin(red, 16px);
             text-shadow: 
-                0 0 0px #db1aec, 
-                0 0 0px #db1aec, 
-                0 0 20px #db1aec, 
-                0 0 0px #db1aec, 
-                0 0 40px #db1aec, 
-                0 0 0px #db1aec, 
-                0 0 0px #db1aec, 
-                0 0 0px #db1aec;
+                0 0 0px $pink_color, 
+                0 0 0px $pink_color, 
+                0 0 20px $pink_color, 
+                0 0 0px $pink_color, 
+                0 0 40px $pink_color, 
+                0 0 0px $pink_color, 
+                0 0 0px $pink_color, 
+                0 0 0px $pink_color;
         }
         span {
             font-family: Roboto, sans-serif;
             font-size: 18px;
             font-weight: 300;
-            color: #fff;
+            color: $white_color;
             margin-top: 15px;
         }
         p {
@@ -52,7 +50,7 @@
             padding: 0;
             font-size: 16px;
             font-weight: 300;
-            color: rgba(255, 255, 255, .5);;
+            color: rgba(255, 255, 255, .5);
         }
     }
     &_text {
@@ -61,7 +59,7 @@
         flex-direction: column;
         justify-content: space-between;
         &-top {
-            color: #fff;
+            color: $white_color;
             padding-top: 10px;
             padding-left: 30px;
             span {
@@ -85,21 +83,21 @@
                 padding: 0 45px 0 20px;
                 width: 180px;
                 height: 45px;
-                color: #cdcdcd;
-                border: 2px solid #cdcdcd7a;
+                color: $light_gray_color;
+                border: 2px solid $dark_gray_color;
                 font-size: 18px;
                 margin-right: 35px;
                 outline: none;
             }
             span {
                 font-family: Roboto, sans-serif;
-                color: #fff; 
+                color: $white_color; 
                 margin-left: 20px;
                 font-size: 22px;
             }
             &-search {
                 display: block;
-                border: 2px solid gray;
+                border: 2px solid $middle_gray_color;
                 border-radius: 100%;
                 width: 35px;
                 height: 35px;
@@ -109,15 +107,15 @@
                 cursor: pointer;
                 transition: .5s ease-in;
                 &:hover {
-                    color: #db1aec;
-                    border: 2px solid #db1aec;
+                    color: $pink_color;
+                    border: 2px solid $pink_color;
                 }
             }
             &-user {
                 transition: .5s ease-in;
                 cursor: pointer;
                 &:hover {
-                    color: #db1aec;
+                    color: $pink_color;
                 }
             }
             &-tel {
@@ -132,6 +130,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    width: 45px;
                     span {
                         color: rgb(81, 81, 245);
                         font-size: 20px;
@@ -147,6 +146,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    width: 45px;
                     span {
                         color: rgb(245, 60, 60);
                         font-size: 20px;
@@ -164,13 +164,14 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    width: 45px;
                     span {
-                        color: yellow;
+                        color: $yellow_color;
                         font-size: 20px;
                     }
                     p {
                         font-size: 12px;
-                        color: yellow;
+                        color: $yellow_color;
                         margin: 0;
                     }
                 }
@@ -179,39 +180,36 @@
     }
 }
 
-
-// @media (max-width: 1050px) {
-    @include test {
-        .header {
-            justify-content: space-around;
+@media (max-width: 1050px) {
+    .header {
+        justify-content: space-around;
+        align-items: center;
+        &_text {
+            display: none;
+        }
+        &_mobile {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            &_text {
-                display: none;
+            &-burger {
+                margin-right: 60px;
+                span {
+                    display: block;
+                    width: 50px;
+                    height: 4px;
+                    margin: 8px 0;
+                    background-color: $pink_color;
+                }
             }
-            &_mobile {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                &-burger {
-                    margin-right: 60px;
-                    span {
-                        display: block;
-                        width: 50px;
-                        height: 4px;
-                        margin: 8px 0;
-                        background-color: #db1aec;
-                    }
-                }
-                &-phone {
-                    font-size: 60px;
-                    color: #db1aec;
-                    margin-top: 4px;
-                    margin-left: 60px;
-                }
+            &-phone {
+                font-size: 60px;
+                color: $pink_color;
+                margin-top: 4px;
+                margin-left: 60px;
             }
         }
     }
-// }
+}
 
 @media (max-width: 650px) {
     .header {

@@ -1,0 +1,27 @@
+$size-big: 1050px;
+
+@mixin test {
+    @media (max-width: 1050px) {
+        @content
+    }
+};
+
+@mixin percent-tag {
+    border: 1px solid rgba(221, 90, 50, 0.781);
+    color: rgba(221, 90, 50, 0.781);
+}
+
+@mixin new-tag {
+    border: 1px solid #04A89A;
+    color: #04A89A;
+}
+
+@mixin hit-tag {
+    border: 1px solid #dbac11;
+    color: #dbac11;
+}
+
+@mixin sale-tag {
+    border: 1px solid #660361;
+    color: #660361;
+}
