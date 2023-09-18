@@ -1,4 +1,6 @@
 import testPhoto from "../../img/popular/7.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./BasketProducts.scss";
 
 const BasketProducts = () => {
@@ -34,7 +36,21 @@ const BasketProducts = () => {
 					</div>
 				</div>
 			</div>
-			<div className="basket_panel"></div>
+			<div className="basket_panel">
+				<button>швидке замовлення</button>
+
+				<form className="basket_panel-form">
+					<div className="basket_panel-input">
+						<span>test</span>
+						<input type="text" />
+					</div>
+
+					<div className="basket_panel-user">
+						<FontAwesomeIcon icon={faUser} />
+						<span>test</span>
+					</div>
+				</form>
+			</div>
 		</div>
 	);
 };
