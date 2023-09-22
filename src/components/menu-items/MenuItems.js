@@ -18,7 +18,6 @@ function MenuItems({ category, title }) {
 				let filteredData = data.menu.filter(
 					(item) => item.category === category
 				);
-				console.log("filtered", filteredData);
 
 				dispatch(getMenuListFromDatabase(filteredData));
 			}

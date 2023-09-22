@@ -22,6 +22,7 @@
     "router-dom": "^2.2.11",
     "sass": "^1.63.6",
     "swiper": "^10.0.4",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

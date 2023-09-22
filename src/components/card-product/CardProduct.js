@@ -1,16 +1,20 @@
-import { faPlus, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
 import { faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
+import { faPlus, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./CardProduct.scss";
-import { useSelector } from "react-redux";
+import { getBasketList } from "../../store/menuSlice";
+import { useEffect, useState } from "react";
+import { onValue, ref, set } from "firebase/database";
+import { db } from "../../firebase";
 import Line from "../line/Line";
-import { useState } from "react";
+import "./CardProduct.scss";
 
 const CardProduct = () => {
-	const currentProd = useSelector((elem) => elem.menu.current);
-	const { title, descr, category, img, currency, weight, price } =
-		currentProd[0];
-
+	const dispatch = useDispatch();
+	const data = useSelector((elem) => elem.menu);
+	const [listBasket, setListBasket] = useState([]);
+	const { title, descr, category, img, currency, weight, price, id } =
+		data.current[0];
 	const [amountProds, setAmountProds] = useState(1);
 	const [correctPrice, setCorrectPrice] = useState(price);
 
@@ -21,6 +25,17 @@ const CardProduct = () => {
 			return num;
 		}
 	};
+
+	useEffect(() => {
+		onValue(ref(db), (item) => {
+			const data = item.val();
+
+			if (data !== null) {
+				dispatch(getBasketList(data.basket));
+				setListBasket(data.basket);
+			}
+		});
+	}, []);
 
 	const actionWithAmount = (action) => {
 		switch (action) {
@@ -34,7 +49,7 @@ const CardProduct = () => {
 	};
 
 	const addProductToBasket = () => {
-		console.log("work");
+		return set(ref(db, `/basket`), [...listBasket, data.current[0]]);
 	};
 
 	return (

@@ -6,6 +6,12 @@
     &_list {
         &-item {
             display: flex;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #696969;
+            &:first-child {
+                border: none;
+            }
             &-photo {
                 img {
                     width: 170px;
@@ -113,10 +119,49 @@
         &-input {
             display: flex;
             flex-direction: column;
+            input {
+                background: none;
+                border: none;
+                outline: none;
+                color: #0aaa9b; 
+                font-size: 20px;
+                letter-spacing: 1px;
+                &::placeholder {
+                    color: #0aaa9b;
+                }
+            }
+            span {
+                color: #858585;
+                font-family: Roboto, sans-serif;
+                font-weight: 300;
+                font-size: 13px;
+                margin-bottom: 17px;
+            }
         }
         &-user {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            svg {
+                width: 25px;
+                color: #0aaa9b;
+                font-size: 24px;
+                border: 3px solid #0aaa9a59;
+                border-radius: 100%;
+                padding: 5px;
+                cursor: pointer;
+                &:hover {
+                    border: 3px solid #0aaa9b;
+                    transition: .5s ease-in;
+                }
+            }
+            span {
+                color: #858585;
+                font-family: Roboto, sans-serif;
+                font-weight: 300;
+                font-size: 13px;
+                margin-top: 10px;
+            }
         }
         button {
             font-family: 'Roboto', sans-serif;

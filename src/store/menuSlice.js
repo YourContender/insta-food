@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 	menu: [],
 	current: [],
+	basket: [],
 };
 
 const menu = createSlice({
@@ -15,10 +16,14 @@ const menu = createSlice({
 		getCurrentProduct: (state, action) => {
 			state.current = action.payload;
 		},
+		getBasketList: (state, action) => {
+			state.basket = action.payload;
+		},
 	},
 });
 
 const { actions, reducer } = menu;
 
 export default reducer;
-export const { getMenuListFromDatabase, getCurrentProduct } = actions;
+export const { getMenuListFromDatabase, getCurrentProduct, getBasketList } =
+	actions;
