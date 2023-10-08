@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import { onValue, ref } from "firebase/database";
+import { onValue, ref, set } from "firebase/database";
 import { db } from "../../firebase";
 import { v4 as uuidv4 } from "uuid";
+import BasketProductItem from "./basket-product-item/BasketProductItem";
 import "./BasketProducts.scss";
 
 const BasketProducts = () => {
@@ -19,40 +20,25 @@ const BasketProducts = () => {
 		});
 	}, []);
 
+	const removeProductFromBasket = (id) => {
+		const newOrderProductList = Object.values(basketList).filter(
+			(item) => item.id !== id
+		);
+		setBasketList(newOrderProductList);
+
+		set(ref(db, `/basket`), newOrderProductList);
+	};
+
 	return (
 		<div className="basket">
 			<div className="basket_list">
 				{basketList.map((item) => {
 					return (
-						<div className="basket_list-item" key={uuidv4()}>
-							<div className="basket_list-item-photo">
-								<img src={item.img} alt="test" />
-							</div>
-
-							<div className="basket_list-item-descr">
-								<h4>{item.title}</h4>
-								<span>{item.descr}</span>
-
-								<div className="details">
-									<div className="details_price">
-										<p>x 1</p>
-										<span>
-											{item.price} {item.currency}
-										</span>
-									</div>
-
-									<div className="details_tag">
-										<span className="details_tag-new">new</span>
-										<span className="details_tag-hit">hit</span>
-									</div>
-								</div>
-							</div>
-
-							<div className="basket_list-item-btns">
-								<button>+</button>
-								<button>-</button>
-							</div>
-						</div>
+						<BasketProductItem
+							{...item}
+							key={uuidv4()}
+							removeProductFromBasket={removeProductFromBasket}
+						/>
 					);
 				})}
 			</div>
