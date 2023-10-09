@@ -3,6 +3,7 @@ import { useState } from "react";
 const BasketProductItem = ({
 	id,
 	img,
+	tag,
 	title,
 	descr,
 	price,
@@ -29,14 +30,14 @@ const BasketProductItem = ({
 				<span>{descr}</span>
 				<div className="details">
 					<div className="details_price">
-						<p>x {quantityOrderProd}</p>
-						<span>
+						<p className="details_price-quantity">x {quantityOrderProd}</p>
+						<span className="details_price-num">
 							{price * quantityOrderProd} {currency}
 						</span>
 					</div>
 					<div className="details_tag">
-						<span className="details_tag-new">new</span>
-						<span className="details_tag-hit">hit</span>
+						<span className={tag[0][1]}>{tag[0][0]}</span>
+						<span className={tag[1][1]}>{tag[1][0]}</span>
 					</div>
 				</div>
 			</div>

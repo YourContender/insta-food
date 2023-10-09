@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { onValue, ref, set } from "firebase/database";
 import { db } from "../../firebase";
 import { v4 as uuidv4 } from "uuid";
+import { InputMask } from "primereact/inputmask";
 import BasketProductItem from "./basket-product-item/BasketProductItem";
 import "./BasketProducts.scss";
 
@@ -41,19 +42,41 @@ const BasketProducts = () => {
 						/>
 					);
 				})}
+				<div className="basket_clear">
+					<div className="basket_clear-text">
+						<span>очистити кошик</span>
+					</div>
+				</div>
 			</div>
+
 			<div className="basket_panel">
 				<button>швидке замовлення</button>
 
 				<form className="basket_panel-form">
-					<div className="basket_panel-input">
-						<span>Я новий клієнт</span>
-						<input type="text" placeholder="+38(__)__ ____" />
-					</div>
+					<div className="basket_panel-form-wrapper">
+						<div className="basket_panel-input">
+							<span>Я новий клієнт</span>
+							<InputMask
+								placeholder="+380"
+								type="tel"
+								mask="+380 99 999 9999"
+							/>
+						</div>
 
-					<div className="basket_panel-user">
-						<FontAwesomeIcon icon={faUser} />
-						<span>авторизація</span>
+						<div className="basket_panel-user">
+							<FontAwesomeIcon icon={faUser} />
+							<span>авторизація</span>
+						</div>
+					</div>
+					<div className="basket_panel-form-name">
+						<div className="basket_panel-input-name">
+							<span>Ім'я</span>
+							<input
+								className="basket_panel-input"
+								type="text"
+								placeholder="Ім'я"
+							/>
+						</div>
 					</div>
 				</form>
 			</div>
